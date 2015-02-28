@@ -1,0 +1,581 @@
+/*!
+ * Start Bootstrap - Stylish Portfolio Bootstrap Theme (http://startbootstrap.com)
+ * Code licensed under the Apache License v2.0.
+ * For details, see http://www.apache.org/licenses/LICENSE-2.0.
+ */
+
+/* Global Styles */
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    font-family: "Source Sans Pro","Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+
+p {
+    font-size: 1.3em;
+}
+
+h1 {
+    font-size: 3em;
+}
+
+h2{
+    font-size: 2.2em;
+}
+
+.user {
+    border-bottom: 1px solid #CCC;
+    padding: 5px 0;
+}
+
+.user p {
+    margin: 4px 0;
+}
+
+.user .admin {
+    display: none;
+}
+
+.user:hover {
+    background: #fafafa;
+}
+
+.user:hover .admin {
+    display: inline;
+}
+
+.portfolio-link {
+    color: white;
+    text-decoration: underline;
+    font-size: 1.2em;
+}
+
+.text-vertical-center {
+    display: table-cell;
+    text-align: center;
+    vertical-align: middle;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.text-vertical-center h1 {
+    margin: 0;
+    padding: 0;
+    font-size: 4.5em;
+    font-weight: 200;
+    color: white;
+}
+
+.text-vertical-center h3 {
+    font-weight: 200;
+    color: white;
+}
+
+.text-primary {
+    color: #635f7d;
+}
+
+/* Custom Button Styles */
+
+.btn-dark {
+    border-radius: 0;
+    color: #fff;
+    background-color: rgba(0,0,0,0.6);
+}
+
+.btn-dark:hover,
+.btn-dark:focus,
+.btn-dark:active {
+    color: #fff;
+    background-color: rgba(0,0,0,0.7);
+}
+
+.typeform-share {
+    font-size: 24px;
+    padding: 10px 10px 10px 10px;
+    border-radius: 0;
+    color: #fff;
+    border: 2px solid white;
+}
+
+.typeform-share:hover,
+.typeform-share:focus,
+.typeform-share:active {
+    text-decoration: none;
+    color: #fff;
+    background-color: rgba(0,0,0,0.3);
+}
+
+.btn-light {
+    border-radius: 0;
+    color: #333;
+    background-color: rgb(255,255,255);
+}
+
+.btn-light:hover,
+.btn-light:focus,
+.btn-light:active {
+    color: #333;
+    background-color: rgba(255,255,255,0.8);
+}
+
+.typeform-share-light {
+    text-decoration: none;
+    border-radius: 0;
+    color: #333;
+    background-color: rgb(255,255,255);
+    font-size: 18px;
+    padding: 10px 16px 10px 16px;
+}
+
+.typeform-share-light:hover,
+.typeform-share-light:focus,
+.typeform-share-light:active {
+    text-decoration: none;
+    color: #333;
+    background-color: rgba(255,255,255,0.8);
+}
+
+/* Custom Horizontal Rule */
+
+hr.small {
+    max-width: 100px;
+}
+
+/* Nav */
+.navbar {
+    background-color: #635f7d;
+    z-index: 2;
+    border: 0px;
+    position: relative;
+    border-radius: 0px;
+    height: 100px;
+}
+
+/* Header */
+
+.header {
+    display: table;
+    position: relative;
+    margin-top: -80px;
+    width: 100%;
+    height: 500px;
+    background-color: #635f7d;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+}
+
+
+/* About */
+
+.about {
+    padding: 50px 0;
+}
+
+/* Services */
+
+.services {
+    padding: 50px 0;
+    background-color: #635f7d;
+}
+
+.service-item {
+    margin-bottom: 30px;
+}
+
+.startups {
+    width: 100%;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+
+/* Portfolio */
+
+.portfolio {
+    padding: 50px 0;
+}
+
+.portfolio-item {
+    margin-bottom: 30px;
+    position: relative;
+}
+
+.img-portfolio {
+    margin: 0 auto;
+}
+
+
+/* Call to Action */
+
+.call-to-action {
+    padding: 50px 0;
+    background-color: #635f7d;
+}
+
+.call-to-action .btn {
+    margin: 10px;
+}
+
+/* Startups Table */
+.table {
+    width: 100%;
+    margin-bottom: 0px;
+}
+
+.table tr {
+    height: 60px;
+}
+
+.table td {
+    text-align: left;
+}
+
+.tb-logo img{
+    max-width: 60px;
+}
+
+.table tbody tr td {
+    vertical-align: middle;  
+}
+
+.tb-startup a{
+    text-decoration: none;
+    font-weight: 400;
+    font-size: 18px;
+    color: black;
+}
+
+.tb-position a{
+    text-decoration: none;
+    font-weight: 300;
+    font-size: 18px;
+    color: black;
+}
+
+.tb-equity a {
+    text-decoration: none;
+    font-weight: 300;
+    font-size: 18px;
+    color: black;
+}
+
+
+.tb-duration a{
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 14px;
+    color: black;
+    text-align: center;
+}
+
+.tb-location a{
+    text-decoration: none;
+    font-weight: 300;
+    font-size: 18px;
+    color: black;
+}
+
+
+.tb-skills a{
+    text-decoration: none;
+    font-weight: 300;
+    font-size: 18px;
+    color: black;
+}
+
+.skills {
+    text-align: left;
+    background-color: #673AB7;
+    color: white;
+    border: 1px solid white;
+    display: inline;
+    margin: 0 1px 0 1px;
+    font-size: 14px;
+    padding: 2px 2px 2px 2px;
+}
+
+.table-ad {
+    background-color: #F44336;
+    padding-top: 6px;
+    padding-bottom: 6px;
+    color: white;
+    margin-left: -5px;
+    margin-right: -5px;
+}
+
+.table-ad h4{
+    font-size: 20px
+}
+
+/* Footer */
+
+footer {
+    padding: 50px 0;
+}
+
+footer p {
+    font-size: 1em;
+}
+
+.footerlogo {
+    width: 150px;
+}
+
+.img-portfolio{
+    margin-left: 0px;
+    margin-right: 0px;
+}
+
+.img-portfolio:hover {
+    opacity: 0.9;
+
+}
+
+.imgh2 span { 
+   color: white; 
+   font: bold 36px/52px Helvetica, Sans-Serif; 
+   letter-spacing: -1px;  
+   background: rgba(0, 0, 0, 0.7);
+   padding: 10px; 
+}
+
+
+.imgh2 { 
+   position: absolute; 
+   top: 0px; 
+   left: 0px;
+}
+
+.imgh3 span { 
+   color: white; 
+   font: bold 24px/36px Helvetica, Sans-Serif; 
+   letter-spacing: -1px;  
+   background: rgba(0, 0, 0, 0.7);
+   padding: 10px; 
+}
+
+
+.imgh3 { 
+   position: absolute; 
+   top: 100px; 
+   left: 0px;
+}
+
+.imgh4 span { 
+   color: white; 
+   font: bold 24px/36px Helvetica, Sans-Serif; 
+   letter-spacing: -1px;  
+   background: rgba(0, 0, 0, 0.7);
+   padding: 10px; 
+}
+
+
+.imgh4 { 
+   position: absolute; 
+   top: 120px; 
+   left: 0px;
+}
+
+.imgh5 span { 
+   color: white; 
+   font: bold 24px/36px Helvetica, Sans-Serif; 
+   letter-spacing: -1px;  
+   background: rgba(0, 0, 0, 0.7);
+   padding: 10px; 
+}
+
+
+.imgh5 { 
+   position: absolute; 
+   top: 170px; 
+   left: 0px;
+}
+
+/* Modals */
+
+.close {
+    float: left;
+    font-size: 48px;
+    position: relative;
+}
+
+.modal-header .close {
+    margin-left: -40px;
+    width: 40px;
+    background-color: red;
+    opacity: .6;
+}
+
+.modal-header .close:hover {
+    opacity: .8;
+}
+
+.startup-modal .modal-content {
+    width: 70%;
+    border-radius: 0px;
+    border: 0px;
+    padding: 0px;
+    background-clip: border-box;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    float: right;
+}
+
+.startup-modal .modal-header {
+    background-color: #EFEFF2;
+}
+
+.startup-modal .modal-footer {
+    font-size: 2em;
+    background-color: #EFEFF2;
+}
+
+.btn-contact {
+    border-radius: 0;
+    border: 2px solid lightgrey;
+    color: #e9482b;
+    background-color: rgb(255,255,255);
+    font-weight: 600;
+    font-size: 24px;
+    padding: 5px 10px 5px 5px;
+}
+
+.founder {
+    width: 180px;
+    display: inline-block;
+    text-align: center;
+}
+
+.founderinfo {
+    padding-top: 5px;
+    text-align: center;
+}
+
+.founderinfo p {
+    margin-bottom: 5px;
+}
+
+.founderjob {
+    font-size: 14px;
+    font-style: italic;
+    color: grey;
+}
+
+.founderimg {
+    width: 100px;
+    height: 100px;
+    border-radius: 60px;
+    float: center;
+}
+
+@media only screen and (max-width: 700px) {
+    .startup-modal .modal-content {
+    width: 100%;
+    border-radius: 0px;
+    border: 0px;
+    padding: 0px;
+    background-clip: border-box;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    float: right;}
+
+    .close {
+    float: right;
+    font-size: 48px;
+    z-index: 2;}
+
+    .modal-header .close {
+    width: 40px;
+    background-color: red;
+    opacity: .6;}
+
+    .modal-header .close:hover {
+    opacity: .8;}
+
+    .modal-header {
+        text-align: center;
+    }
+}
+
+.portfolio-modal .modal-content {
+    padding: 100px 0;
+    min-height: 100%;
+    border: 0;
+    border-radius: 0;
+    text-align: left;
+    background-clip: border-box;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+
+.portfolio-modal .modal-content h2 {
+    margin-bottom: 15px;
+    font-size: 3em;
+}
+
+.portfolio-modal .modal-content p {
+    margin-bottom: 30px;
+}
+
+.portfolio-modal .modal-content p.item-intro {
+    margin: 20px 0 10px;
+    font-family: "Droid Serif","Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 16px;
+    font-style: italic;
+}
+
+.portfolio-modal .modal-content ul.list-inline {
+    margin-top: 0;
+    margin-bottom: 30px;
+}
+
+
+.portfolio-modal .close-modal {
+    position: absolute;
+    top: 25px;
+    right: 25px;
+    width: 50px;
+    height: 50px;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.portfolio-modal .close-modal:hover {
+    opacity: .3;
+}
+
+.portfolio-modal .close-modal .lr {
+    z-index: 1051;
+    width: 1px;
+    height: 50px;
+    margin-left: 35px;
+    background-color: #222;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+.portfolio-modal .close-modal .lr .rl {
+    z-index: 1052;
+    width: 1px;
+    height: 50px;
+    background-color: #222;
+    -webkit-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    transform: rotate(90deg);
+}
+
+.portfolio-modal .modal-backdrop {
+    display: none;
+    opacity: 0;
+}
+
+

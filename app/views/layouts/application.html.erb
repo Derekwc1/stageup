@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Stageup</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="StageUp | Find cofounders to take your startup to the next stage">
+    <meta name="author" content="">
+
+    <!-- Bootstrap Core CSS -->
+    <link href="assets/bootstrap.css.map" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="assets/stylish-portfolio.css" rel="stylesheet">
+
+    <meta name="google-site-verification" content="CIeR-jvk02_pcVzGIbvKg6_F71nV4nzVtSvlbQb2Wlg" />
+
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-47410208-6', 'auto');
+      ga('send', 'pageview');
+
+    </script>
+
+    <!-- Custom Fonts -->
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+
+	<!-- Navigation -->
+    <nav class="navbar navbar-default">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          	<a class="navbar-brand" href="#">
+        	<img alt="Stageup" src="/assets/stageup.png"></a>
+    	</div>
+        <div class="collapse navbar-collapse" id="navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                <li><%= link_to 'Posts', '#' %></li>
+                <% if current_user %>
+                    <li><%= link_to 'Edit Profile',edit_user_registration_path %></li>
+                    <li><%= link_to 'Logout', destroy_user_session_path, method: :delete %></li>
+                <% else %>
+                    <li><%= link_to 'Login', new_user_session_path %></li>
+                <% end %>
+            </ul>
+           </div> 
+      </div>
+    </nav>
+
+	<% if notice %>
+	  <p class="alert alert-success"><%= notice %></p>
+	<% end %>
+	<% if alert %>
+	  <p class="alert alert-danger"><%= alert %></p>
+	<% end %>
+
+<%= yield %>
+
+
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-10 col-lg-offset-1 text-center">
+                    <img class="footerlogo" src="/assets/stageup.png" style="padding-bottom: 8px">
+                    <p>Portland, Oregon <i class="fa fa-plane fa-fw fa-1x"></i> Milwaukee, Wisconsin</p>
+                    <ul class="list-unstyled">
+                        <li><i class="fa fa-envelope-o fa-fw"></i>  <a href="hello@stageup.io">hello@stageup.io</a>
+                        </li>
+                    </ul>
+                    <br>
+                    <ul class="list-inline">
+                        <li>
+                            <a href="https://angel.co/stageup"><i class="fa fa-angellist fa-fw fa-3x"></i></a>
+                        </li>
+                        <li>
+                            <a href="https://twitter.com/stageupio"><i class="fa fa-twitter fa-fw fa-3x"></i></a>
+                        </li>
+                    </ul>
+                    <hr class="small">
+                    <p class="text-muted">Copyright &copy; StageUp 2015</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- jQuery -->
+    <script src="assets/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="assets/bootstrap.js"></script>
+
+    <!-- Custom Theme JavaScript -->
+</body>
+</html>

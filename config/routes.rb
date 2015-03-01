@@ -2,6 +2,11 @@ Rails.application.routes.draw do
   devise_for :users
   get 'static_pages/home'
 
+  devise_scope :user do
+    get 'register', to: 'devise/registrations#new', as: :register
+    get 'login', to: 'devise/sessions#new', as: :login
+  end
+
   resources :startups
 
 

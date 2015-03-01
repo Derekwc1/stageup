@@ -1,6 +1,8 @@
 class StartupsController < ApplicationController
   before_action :set_startup, only: [:show, :edit, :update, :destroy]
 
+  before_filter :authenticate_user!
+
   respond_to :html
 
   def index
@@ -22,6 +24,7 @@ class StartupsController < ApplicationController
 
   def create
     @startup = Startup.new(startup_params)
+    @startup.user_id = current_user.id
     @startup.save
     respond_with(@startup)
   end

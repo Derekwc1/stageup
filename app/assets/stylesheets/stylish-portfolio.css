@@ -157,6 +157,10 @@ hr.small {
     height: 100px;
 }
 
+.navbar-default .navbar-nav > li > a {
+    color: white;
+}
+
 /* Header */
 
 .header {
@@ -576,6 +580,26 @@ footer p {
 .portfolio-modal .modal-backdrop {
     display: none;
     opacity: 0;
+}
+
+/* Sign Up Pages */
+
+.signup {
+    border: 2px solid grey; 
+    border-radius: 3px;
+    padding: 20px 10px 10px 10px; 
+    min-width: 360px; 
+    left: 0;
+    background-color: #EFEFF2;
+}
+
+.edituser {
+    border: 2px solid grey; 
+    border-radius: 3px;
+    padding: 20px 10px 10px 10px; 
+    min-width: 360px; 
+    left: 0;
+    background-color: #EFEFF2;
 }
 
 

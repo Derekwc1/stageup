@@ -1,8 +1,9 @@
 Rails.application.routes.draw do
+  get 'profiles/show'
+
   devise_for :admin_users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)
   devise_for :users
-  get 'static_pages/home'
 
   devise_scope :user do
     get 'register', to: 'devise/registrations#new', as: :register

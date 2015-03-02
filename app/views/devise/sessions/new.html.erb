@@ -1,3 +1,10 @@
+  <% if notice %>
+    <p class="alert alert-success" style="position: relative"><%= notice %></p>
+  <% end %>
+  <% if alert %>
+    <p class="alert alert-danger" style="position: relative"><%= alert %></p>
+  <% end %>
+  
 <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
   <div class="container" style="margin-left: 0">
     <h2>Log In</h2>

@@ -10,28 +10,67 @@
       </ul>
     </div>
   <% end %>
+      <div class="container" style="padding: 10px; background-color: #d3d3d3;">
+        <div class="row">
+          <div class="col-sm-12 col-md-6 col-lg-6"> 
+            <h4 class="text-center">Startup Information</h4>
+            <hr>
+            <div class="form-group">
+              <%= f.text_field :name, class: "form-control", placeholder: "Name" %>
+            </div>
 
-  <div class="field">
-    <%= f.label :name %><br>
-    <%= f.text_field :name %>
-  </div>
-  <div class="field">
-    <%= f.label :pitch %><br>
-    <%= f.text_field :pitch %>
-  </div>
-  <div class="field">
-    <%= f.label :position %><br>
-    <%= f.text_field :position %>
-  </div>
-  <div class="field">
-    <%= f.label :equity %><br>
-    <%= f.number_field :equity %>
-  </div>
-  <div class="field">
-    <%= f.label :stage %><br>
-    <%= f.text_field :stage %>
-  </div>
-  <div class="actions">
-    <%= f.submit %>
-  </div>
+            <div class="form-group">
+              <%= f.text_field :pitch, class: "form-control", placeholder: "Startup Quick Pitch: 3 - 5 Words" %>
+            </div>
+
+            <div class="form-group">
+              <%= f.text_field :stage, class: "form-control", placeholder: "Startup Stage: idea, mvp, etc" %>
+            </div>
+
+            <div class="form-group">
+              <%= f.text_area :startuppitch, class: "form-control", placeholder: "Startup Pitch", rows: "3" %>
+            </div>
+
+            <div class="form-group">
+              <%= f.url_field :startupurl, class: "form-control", placeholder: "Startup URL" %>
+            </div>
+
+            <div class="form-group">
+              <%= f.text_field :startuptwiturl, class: "form-control", placeholder: "Startup Twitter URL" %>
+            </div>
+
+          </div>
+
+          <div class="col-sm-12 col-md-6 col-lg-6">
+            <h4 class="text-center">Cofounder Request</h4>
+            <hr>
+            <div class="form-group">
+              <%= f.text_field :position, class: "form-control", placeholder: "Talent Need, i.e. Marketing Guru, UI Ninja" %>
+            </div>
+
+            <div class="form-group">
+              <%= f.text_area :corole, class: "form-control", placeholder: "What will your new cofounder be doing?", rows: "3"%>
+            </div>
+
+            <div class="form-group">
+              <%= f.text_field :equity, class: "form-control", placeholder: "Equity Offer" %>
+            </div>
+
+            <div class="form-group">
+              <%= f.text_field :duration, class: "form-control", placeholder: "Length, i.e. 2 - 3 months" %>
+            </div>
+          </div>
+        </div>
+        <div class="row text-center">
+          <hr>
+          <div class="form-group">
+            <div>
+              <%= f.submit "Submit Startup", class: "btn btn-primary" %>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+
 <% end %>

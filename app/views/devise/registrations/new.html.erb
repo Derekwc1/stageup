@@ -6,17 +6,32 @@
   <h2>Register</h2>
 <p class="text-muted">Create an account to post a startup or browse available listings</p>
   <div class="col-xs-12 col-sm-8 col-md-6 col-lg-4 signup" style=" background-color: #EFEFF2">
+    
+    <div class="form-group">
+      <%= f.label :first_name, class: "control-label" %>
+      <div>
+      <%= f.text_field :first_name, class: "form-control", placeholder: "Enter First Name" %>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <%= f.label :last_name, class: "control-label" %>
+      <div>
+      <%= f.text_field :last_name, class: "form-control", placeholder: "Enter Last Name" %>
+      </div>
+    </div>
+
     <div class="form-group">
       <%= f.label :email, class: "control-label" %>
       <div>
-      <%= f.email_field :email, class: "form-control" %>
+      <%= f.email_field :email, class: "form-control", placeholder: "Enter Email"  %>
       </div>
     </div>
 
     <div class="form-group">
         <%= f.label :password, class: "control-label" %>
         <div>
-            <%= f.password_field :password, autocomplete: "off", class: "form-control" %>
+            <%= f.password_field :password, autocomplete: "off", class: "form-control", placeholder: "Enter Password - Min Length 8 Characters"  %>
         </div>
     </div>
 

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Stageup</title>
+  <title>Stageup | Find cofounders to take your startup to the next stage</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
@@ -20,16 +20,6 @@
 
     <meta name="google-site-verification" content="CIeR-jvk02_pcVzGIbvKg6_F71nV4nzVtSvlbQb2Wlg" />
 
-    <script>
-      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-      ga('create', 'UA-47410208-6', 'auto');
-      ga('send', 'pageview');
-
-    </script>
 
     <!-- Custom Fonts -->
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
@@ -53,8 +43,9 @@
     	</div>
             <ul class="nav navbar-nav navbar-right">
                 <% if current_user %>
-                    <li><%= link_to 'Profile', @user_path %></li>
+                    <li><%= link_to 'Profile', profile_path(current_user.id) %></li>
                     <li><%= link_to 'Edit Profile',edit_user_registration_path %></li>
+                    <li><%= link_to 'List Startup', new_startup_path %></li>
                     <li><%= link_to 'Logout', destroy_user_session_path, method: :delete %></li>
                 <% else %>
                     <li><%= link_to 'Sign In', login_path %></li>
@@ -81,7 +72,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-10 col-lg-offset-1 text-center">
-                    <img class="footerlogo" src="/assets/stageup.png" style="padding-bottom: 8px">
+                    <img class="footerlogo" src="/assets/stageupblk.png" style="padding-bottom: 8px">
                     <p>Portland, Oregon <i class="fa fa-plane fa-fw fa-1x"></i> Milwaukee, Wisconsin</p>
                     <ul class="list-unstyled">
                         <li><i class="fa fa-envelope-o fa-fw"></i>  <a href="hello@stageup.io">hello@stageup.io</a>

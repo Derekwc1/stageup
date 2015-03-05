@@ -5,10 +5,7 @@ class StartupsController < ApplicationController
 
   respond_to :html
 
-  def index
-    @startups = Startup.all
-    respond_with(@startups)
-  end
+
 
   def show
     respond_with(@startup)
@@ -20,6 +17,12 @@ class StartupsController < ApplicationController
   end
 
   def edit
+    if current_user.id == @startup.user_id
+      render
+    else
+    flash[:alert] = "You have ventured down the wrong path"
+    redirect_to login_url
+  end
   end
 
   def create
@@ -45,6 +48,6 @@ class StartupsController < ApplicationController
     end
 
     def startup_params
-      params.require(:startup).permit(:name, :pitch, :position, :equity, :stage)
+      params.require(:startup).permit(:name, :pitch, :position, :equity, :stage, :startuppitch, :startupurl, :startuptwiturl, :corole, :duration)
     end
 end

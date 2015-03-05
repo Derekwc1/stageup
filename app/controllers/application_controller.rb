@@ -4,12 +4,20 @@ class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
 
   before_filter :configure_permitted_parameters, if: :devise_controller?
-
+  #before_filter :authenticate_user!, :except => [:after_inactive_sign_up_path_for, :after_sign_up_path_for]
 
     protected
 
-        def configure_permitted_parameters
-            devise_parameter_sanitizer.for(:sign_up) { |u| u.permit(:name, :email, :password) }
-            devise_parameter_sanitizer.for(:account_update) { |u| u.permit(:first_name, :last_name, :email, :password, :current_password, :name, :background) }
-        end
+    def after_sign_up_path_for(resource)
+  		confirm_path
+	end
+
+	def after_inactive_sign_up_path_for(resource)
+  		confirm_path
+	end
+
+    def configure_permitted_parameters
+        devise_parameter_sanitizer.for(:sign_up) { |u| u.permit(:first_name, :last_name, :email, :password) }
+        devise_parameter_sanitizer.for(:account_update) { |u| u.permit(:first_name, :last_name, :email, :password, :current_password, :name, :background) }
+    end
 end

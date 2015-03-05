@@ -1,18 +1,21 @@
 Rails.application.routes.draw do
   get 'profiles/show'
+  devise_for :users
 
   devise_for :admin_users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)
-  devise_for :users
 
   devise_scope :user do
     get 'register', to: 'devise/registrations#new', as: :register
     get 'login', to: 'devise/sessions#new', as: :login
+ #   get 'users/:id', to: 'profiles#show', as: :profile
   end
+
+  #devise_for :users, :controllers => { :confirmations => "confirmations" }
 
   resources :startups
 
-  get '/:id', to: 'profiles#show'
+  resources :profiles, path: '/profiles'
 
 
   # The priority is based upon order of creation: first created -> highest priority.

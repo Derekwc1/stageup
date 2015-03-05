@@ -1,13 +1,27 @@
-<div class="page-header">
-	<h1><%= @user.first_name %></h1>
-</div>
+<div class="container">
+	<div class="col-lg-10 col-lg-offset-1">
+		<div class="page-header">
+			<h1><%= @user.first_name %> <%= @user.last_name %></h1>
+		</div>
+		<p><strong>Background: </strong> <%= @user.background %></p>
 
-<% if @startups %>
-	<% @startups.each do |startup| %>
-	<div class="well">
-		<%= startup.name %>
-		<hr />
-		<%= link_to time_ago_in_words(startup.created_at), startup_path(startup) %> ago
+		<h3>Startups Listed</h3>
+		<% if @startups %>
+			<% @startups.each do |startup| %>
+				<div class="col-xs-12 col-sm-6 col-md-6 col-lg-4">
+					<div class="well">
+						<strong>Name:</strong> <%= link_to startup.name, startup_path(startup) %><br />
+						<strong>Pitch:</strong> <%= startup.pitch %><br />
+						<strong>Position:</strong> <%= startup.position %><br />
+						<strong>Equity:</strong> <%= startup.equity %>%<br />
+						<hr style="margin-top: 5px; margin-bottom: 5px;">
+						<em>Listed <%= time_ago_in_words(startup.created_at) %> ago</em> <br />
+						  <% if @current_user.id == startup.user.id %>
+						<%= link_to 'Edit Startup', edit_startup_path(startup) %>
+							<% end %>
+					</div>
+				</div>
+			<% end %>
+		<% end%>
 	</div>
-	<% end %>
-	<% end%>
+</div>

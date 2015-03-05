@@ -25,5 +25,33 @@
   <%= @startup.stage %>
 </p>
 
-<%= link_to 'Edit', edit_startup_path(@startup) %> |
-<%= link_to 'Back', startups_path %>
+<p>
+  <strong>Startup Pitch:</strong>
+  <%= @startup.startuppitch %>
+</p>
+
+<p>
+  <strong>URL:</strong>
+  <%= @startup.startupurl %>
+</p>
+
+<p>
+  <strong>Twitter:</strong>
+  <%= @startup.startuptwiturl %>
+</p>
+
+<p>
+  <strong>Cofounder Role:</strong>
+  <%= @startup.corole %>
+</p>
+
+<p>
+  <strong>Duration:</strong>
+  <%= @startup.duration %>
+</p>
+
+  <% if current_user.id == @startup.user.id %>
+<%= link_to 'Edit', edit_startup_path(@startup) %>
+<% end %>
+
+
